@@ -1,0 +1,34 @@
+body{
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+.inner{
+  /* position: relative; */
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* header */
+.navbar{
+  position: fixed;
+  height: 80px;
+}
+
+.navbar .inner div{
+  display: flex;
+}
+
+.navbar .navbar-nav .nav-item{
+  margin: 0 25px;
+}
+
+.navbar .navbar-nav{
+  margin-left: 150px;
+}
+
+.navbar .navbar-nav .nav-link{
+  padding: 10px;
+  font-size: 20px;
+}
+
