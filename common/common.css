@@ -1,6 +1,11 @@
 body{
   font-family: Arial, sans-serif;
-  position: relative;
+  /* position: relative; */
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: #f4f4f4;
+  flex-direction: column;
 }
 
 .inner{
@@ -31,4 +36,3 @@ body{
   padding: 10px;
   font-size: 20px;
 }
-

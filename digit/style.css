@@ -4,15 +4,12 @@
   top: 200px;
 }
 
-/* calculator */
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* height: 1000px; */
-  background-color: #f4f4f4;
-  /* background-color: yellow; */
+.sentence{
+  color: black;
 }
+
+/* calculator */
+
 .calculator {
   background: white;
   padding: 20px;
@@ -22,19 +19,19 @@ body {
   top: 300px;
   position: absolute;
 }
-#display {
+#calculator #display {
   width: 100%;
   height: 100px;
   text-align: right;
   font-size: 1.5em;
   margin-bottom: 20px;
 }
-.buttons {
+#calculator .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
 }
-.buttons button {
+#calculator .buttons button {
   width: 90px;
   height: 90px;
   font-size: 1.8em;
@@ -43,14 +40,160 @@ body {
   background-color: #eee;
   border-radius: 5px;
 }
-.buttons button:active {
+#calculator .buttons button:active {
   background-color: #ddd;
 }
-.buttons .equal {
+#calculator .buttons .equal {
   background-color: #f39c12;
   color: white;
 } 
 
 .hidden{
   display: none;
+}
+
+/* 진법 변환 */
+#calculator-digit .container {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+#calculator-digit h2 {
+  color: #333;
+}
+#calculator-digit input, select {
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 20px;
+}
+#calculator-digit #baseSelect{
+  width: 150px;
+}
+#calculator-digit #numberInput{
+  margin-right: 30px;
+}
+#calculator-digit button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#calculator-digit button:hover {
+  background-color: #0056b3;
+}
+#calculator-digit .result_digit {
+  margin-top: 20px;
+  padding: 10px;
+  background: #e9ecef;
+  border-radius: 5px;
+  font-size: 20px;
+}
+#calculator-digit span {
+  font-weight: bold;
+  color: #007BFF;
+}
+
+/* data 단위 변환 */
+#calculator-data .container {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  width: 600px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+#calculator-data .container:hover {
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+#calculator-data h1 {
+  color: #007BFF;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+#calculator-data label {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #555;
+  display: block;
+}
+
+#calculator-data input, 
+#calculator-data select, 
+#calculator-data button {
+  width: 100%;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: #f7f7f7;
+  color: #333;
+  font-size: 20px;
+}
+
+#calculator-data input, select {
+  background-color: #fff;
+}
+
+#calculator-data button {
+  background-color: #007BFF;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#calculator-data button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+#calculator-data .result_data {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+#calculator-data .box {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 45%;
+  text-align: left;
+}
+
+#calculator-data .box p {
+  font-weight: bold;
+  color: #007BFF;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+#calculator-data .box ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#calculator-data .box li {
+  margin-bottom: 10px;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+#calculator-data optgroup {
+  font-style: italic;
+  border-top: 1px dashed #ccc;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }

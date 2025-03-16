@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,13 +22,13 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav me-auto mb-2 mb-md-0">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="/main.html">Home</a>
+              <a class="nav-link active" aria-current="page" href="/main.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="/digit/digit.html">계산기</a>
+              <a class="nav-link" href="/digit/digit.html">계산기</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/main.html">일지</a>
+              <a class="nav-link" href="/">일지</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/main.html">3</a>
@@ -47,6 +47,8 @@
   </nav>
 
 
+  <p class="sentence">원하는 계산기를 선택하세요</p>
+
   <!-- 계산기 버튼-->
   <div class="cal-btn-group btn-group-lg" role="group">
     <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" value="calculator">
@@ -55,13 +57,13 @@
     <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" value="calculator-digit">
     <label class="btn btn-outline-primary" for="btnradio2">진법 변환 & 계산</label>
   
-    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" value="c">
-    <label class="btn btn-outline-primary" for="btnradio3">Radio 3</label>
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" value="calculator-data">
+    <label class="btn btn-outline-primary" for="btnradio3">data 단위 변환</label>
   </div>  
   
   <!-- 일반 계산기 -->
   <div class="calculator hidden" id="calculator">
-    <input type="text" id="display" onkeydown="handleKeyPress(event)">
+    <input type="text" id="display" onkeydown="handleKeyPress_calc(event)">
     <div class="buttons">
         <button onclick="clearDisplay()">C</button>
         <button onclick="appendToDisplay('7')">7</button>
@@ -83,9 +85,60 @@
     </div>
   </div>
 
-  <div class="calculator hidden" id="calculator-digit">2</div>
+  <!-- 진법 변환 -->
+  <div class="calculator hidden" id="calculator-digit">
+    <div class="container">
+      <h2>진수 변환기</h2>
 
-  <div class="calculator hidden" id="c">3</div>
+      <label for="numberInput">숫자를 입력하세요:</label>
+      <input type="text" id="numberInput" onkeydown="handleKeyPress_calc_digit(event)">
+      <label for="baseSelect">진수 선택:</label>
+      <select id="baseSelect">
+          <option value="2">2진수</option>
+          <option value="8">8진수</option>
+          <option value="10" selected>10진수</option>
+          <option value="16">16진수</option>
+      </select>
+      <button onclick="convertNumber()">변환</button>
+      
+      <div class="result_digit" id="result_digit">
+          <p>2진수: <span id="binary"></span></p>
+          <p>8진수: <span id="octal"></span></p>
+          <p>10진수: <span id="decimal"></span></p>
+          <p>16진수: <span id="hexadecimal"></span></p>
+      </div>
+  </div>
+  </div>
+
+  <!-- data 단위 변환 -->
+  <div class="calculator hidden" id="calculator-data">
+    <div class="container">
+      <h1>Data Speed Converter</h1>
+      <label for="dataSpeed">Enter Speed:</label>
+      <input type="number" id="dataSpeed" placeholder="Enter speed">
+      <br>
+
+      <label for="unitFrom">From:</label>
+      <select id="unitFrom">
+          <optgroup label="Standard Units">
+              <option value="B/s">B/s</option>
+              <option value="KB/s">KB/s</option>
+              <option value="MB/s" selected>MB/s</option>               
+              <option value="GB/s">GB/s</option>
+          </optgroup>
+          <optgroup label="Binary Units">
+              <option value="KiB/s">KiB/s</option>
+              <option value="MiB/s">MiB/s</option>
+              <option value="GiB/s">GiB/s</option>
+          </optgroup>
+      </select>
+      <br>
+
+      <button onclick="convertSpeed()">Convert</button>
+
+      <div id="result_data"></div>
+    </div>
+  </div>
 
   
 </body>
