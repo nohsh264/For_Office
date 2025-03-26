@@ -1,0 +1,132 @@
+.container{
+  position: absolute;
+  /* margin-top: 120px; */
+  top: 150px;
+}
+
+.container h2{
+  margin-top: 30px;
+}
+
+body {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+h1, h2 {
+  text-align: left;
+  color: #4A90E2;
+}
+
+h2{
+  margin-top: 30px;
+}
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+textarea{
+  height: 120px;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+button {
+  padding: 10px;
+  background-color: #4A90E2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+button:hover {
+  background-color: #357ABD;
+}
+.entry {
+  background: white;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.entry h3 {
+  margin: 0;
+  color: #333;
+}
+.entry p {
+  max-height: 4.5em; /* 약 3줄까지만 표시 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.entry.expanded p {
+  max-height: none;
+  white-space: normal;
+}
+.entry small {
+  color: #999;
+}
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+  margin-top: 10px;
+}
+.more-btn {
+  background: none;
+  border: none;
+  color: #4A90E2;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 5px 0;
+  display: none;
+}
+.delete-btn, .edit-btn {
+  background-color: #ff4d4d;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+}
+.edit-btn {
+  background-color: #f0ad4e;
+}
+
+.month-group {
+  margin-top: 20px;
+  padding: 10px;
+  background: #f0f0f0;
+  border-radius: 8px;
+}
+
+.month-toggle-btn {
+  background: none;
+  border: none;
+  color: #4A90E2;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 5px;
+  display: block;
+  margin: 5px auto;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
