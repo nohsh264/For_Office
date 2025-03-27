@@ -1,0 +1,101 @@
+.container{
+  position: absolute;
+  /* margin-top: 120px; */
+  top: 150px;
+}
+
+.container h2{
+  margin-top: 30px;
+}
+body { 
+  text-align: center; 
+  background-color: #eef2f7; 
+}
+h1 { 
+  color: #333; 
+  font-size: 2em;
+}
+.calendar-container { 
+  max-width: 1200px; 
+  margin: auto; 
+}
+.weekdays { 
+    display: grid; 
+    grid-template-columns: repeat(7, 1fr); 
+    font-weight: bold; padding: 10px 0; 
+    background: #0056b3; 
+    color: white; 
+    border-radius: 10px; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    background: #4a90e2; /* 더 밝은 파랑 */
+    color: white; /* 글자색 유지 */
+
+}
+.weekday { 
+  padding: 15px 0;
+   text-align: center; 
+   font-size: 1.2em; 
+}
+.calendar { 
+  display: grid; 
+  grid-template-columns: repeat(7, 1fr); 
+  gap: 10px; 
+}
+.day { 
+  border: 1px solid #ddd;
+  background: #ffffff; 
+  padding: 20px; 
+  min-height: 200px; 
+  font-size: 1.2em; 
+  border-radius: 10px; 
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.2s ease-in-out; 
+  position: relative; 
+}
+.day:hover { 
+  transform: scale(1.05); 
+  background: #f0f8ff; 
+}
+.day strong { 
+  position: absolute; 
+  top: 10px; left: 10px; 
+  font-size: 1.2em; 
+  color: #333; 
+}
+.tasks { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 5px; 
+  margin-top: 30px; 
+}
+.tasks input { 
+  width: 90%; 
+  padding: 8px; 
+  border: 1px solid #ccc; 
+  border-radius: 5px;
+  font-size: 1em;
+}
+.tasks input:focus {
+  outline: none; 
+  border-color: #007bff; 
+  background-color: #e6f0ff; 
+}
+#monthPicker { 
+  padding: 8px; 
+  font-size: 1.5em; 
+  border: 1px solid #bbb; 
+  border-radius: 5px; 
+  margin-bottom: 20px; 
+}
+.weekday:nth-child(1) { 
+  color: red; 
+} /* 일요일 */
+.weekday:nth-child(7) { 
+  color: blue; 
+} /* 토요일 */
+.day:nth-child(7n+1) strong { 
+  color: red; 
+} /* 일요일 날짜 */
+.day:nth-child(7n) strong { 
+  color: blue; 
+} /* 토요일 날짜 */
