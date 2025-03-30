@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  /* justify-content: center; */
+  /* min-height: 100vh; */
+  background: #f4f4f9;
+  padding: 20px;
+}
+
+.customer{
+  width: 100%;
+  /* background-color: yellow; */
+  position: absolute;
+  top: 150px;
+}
+
+/* 🔹 배너 스타일 */
+.banner {
+  width: 100%;
+  background: #007bff;
+  color: white;
+  text-align: center;
+  padding: 30px 0; /* 배너 두껍게 유지 */
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 50px; /* 🔥 배너와 게시글 작성 사이 간격 유지 */
+}
+
+/* 🔹 게시글 작성 섹션 */
+.customer .container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  margin-top: -20px; /* 🔥 전체적으로 위로 올리되 겹치지 않도록 조정 */
+}
+
+.customer h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.customer textarea {
+  width: 100%;
+  height: 200px; /* 🔥 입력창 크기 확대 */
+  padding: 15px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  resize: none; /* 크기 조절 비활성화 */
+}
+
+.customer button {
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.customer button:hover {
+  background: #0056b3;
+}
+
+.customer .hidden {
+  display: none;
+}
+
+.customer .post-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  text-align: left;
+}
