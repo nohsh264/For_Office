@@ -28,16 +28,16 @@
               <a class="nav-link" aria-current="page" href="/main.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="/digit/digit.html">계산기</a>
+              <a class="nav-link active" href="/digit/digit.html">Calculator</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/diary/index.html">일지</a>
+              <a class="nav-link" href="/diary/index.html">Diary</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/calender/index.html">To Do List</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/customer/index.html">Customer Service</a>
+              <a class="nav-link" href="/study/index.html">Today's Word</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
@@ -54,7 +54,7 @@
 
   <!-- 계산기 버튼-->
   <div class="cal-btn-group btn-group-lg" role="group">
-    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" value="calculator">
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" value="calculator" checked>
     <label class="btn btn-outline-primary" for="btnradio1">일반 계산기</label>
   
     <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" value="calculator-digit">
@@ -65,7 +65,7 @@
   </div>  
   
   <!-- 일반 계산기 -->
-  <div class="calculator hidden" id="calculator">
+  <div class="calculator" id="calculator">
     <input type="text" id="display" onkeydown="handleKeyPress_calc(event)">
     <div class="buttons">
         <button onclick="clearDisplay()">C</button>

@@ -146,3 +146,10 @@ function convertSpeed() {
       </div>
   `;
 }
+
+window.onload = function() {
+    const checkedRadio = document.querySelector("input[name='view']:checked");
+    if (checkedRadio) {
+        updateView(checkedRadio.value);
+    }
+};

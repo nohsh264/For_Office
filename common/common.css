@@ -14,6 +14,14 @@ body{
   margin: 0 auto;
 }
 
+img{
+  display: block; /*그림은 기본적으로 인라인 요소(아래 부분이 뜬다). block으로 없애기 */
+}
+
+a{
+  text-decoration: none;
+}
+
 /* header */
 .navbar{
   position: fixed;
@@ -36,3 +44,5 @@ body{
   padding: 10px;
   font-size: 20px;
 }
+
+

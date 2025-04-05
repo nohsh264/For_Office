@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="icon" href="../favicon.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  <script defer src="emoji.min.js"></script>
   <link rel="stylesheet" href="./index.css">
   <link rel="stylesheet" href="../common/common.css">
   <script defer src="./script.js"></script>
@@ -36,7 +38,7 @@
               <a class="nav-link" href="/calender/index.html">To Do List</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/study/index.html">Today's Word</a>
+              <a class="nav-link active" href="/study/index.html">Today's Word</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
@@ -48,34 +50,14 @@
     </div>
   </nav>
 
-  <div class="customer">
-    <!-- 🔹 배너 + 게시글 작성 -->
-    <div class="banner">
-        고객님이 원하시는 기능이 있으시면 입력해주세요 ✨
-    </div>
-
-    <div class="container">
-        <h2>📌 게시글 작성</h2>
-        <textarea id="userPost" placeholder="여기에 글을 작성하세요..." rows="6"></textarea>
-        <button onclick="savePost()">저장하기</button>
-    </div>
-
-    <!-- 관리자 로그인 (초기에는 숨김) -->
-    <div class="container hidden" id="adminLogin">
-        <h2>🔑 관리자 로그인</h2>
-        <input type="password" id="adminPassword" placeholder="관리자 비밀번호 입력">
-        <button onclick="checkAdmin()">로그인</button>
-    </div>
-
-    <!-- 관리자 전용 게시글 보기 (초기에는 숨김) -->
-    <div class="container hidden" id="adminContent">
-        <h2>📜 사용자 게시글</h2>
-        <div class="post-card">
-            <p id="storedPost">저장된 글이 없습니다.</p>
-        </div>
-    </div>
+  <div class="banner">매일 단어가 바뀝니다. 영어 공부 같이 해봐요!</div>
+  <div class="container">
+      <h2>Today's Word: <span id="daily-word"></span></h2>
+      <p><strong>Meaning:</strong> <span id="daily-meaning"></span></p>
+      <h3>Example Sentences:</h3>
+      <ul id="example-list"></ul>
   </div>
-  
+
   
 </body>
 </html>
